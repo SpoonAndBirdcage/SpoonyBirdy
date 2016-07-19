@@ -1,0 +1,32 @@
+{
+  "name": "spoon-and-birdcage",
+  "version": "0.1.0",
+  "description": "This file contains all the dependencies that are needed for the jekyll grunt build.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SpoonAndBirdcage/SpoonyBirdy.git"
+  },
+  "keywords": [
+    "spoonandbirdcage",
+    "jekyll",
+    "grunt"
+  ],
+  "author": "Barrett A. Long",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpoonAndBirdcage/SpoonyBirdy/issues"
+  },
+  "homepage": "https://github.com/SpoonAndBirdcage/SpoonyBirdy#readme",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-sass": "^1.2.0",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "~0.6.0",
+    "time-grunt": "~0.4.0"
+  }
+}
