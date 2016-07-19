@@ -1,0 +1,73 @@
+/**
+ * Basic styling
+ */
+body {
+    background-color: $background-color;
+}
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

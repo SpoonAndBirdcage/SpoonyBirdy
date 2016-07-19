@@ -1,6 +1,6 @@
-'use strict';
-
 module.exports = function (grunt) {
+
+'use strict';
 
     // Show elapsed time after tasks run to visualize performance
     require('time-grunt')(grunt);
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
+                tasks: ['sass', 'cssmin']
             }
         },
 
@@ -47,11 +47,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd:'_site/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: '_site/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
 
         // run tasks in parallel
         concurrent: {
             serve: [
                 'sass',
+                'cssmin',
                 'watch',
                 'shell:jekyllServe'
             ],
