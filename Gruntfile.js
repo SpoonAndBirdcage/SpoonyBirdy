@@ -22,9 +22,16 @@ module.exports = function (grunt) {
 
         // watch for files to change and run tasks when they do
         watch: {
+            options: {
+                livereload: true
+            },
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass', 'cssmin']
+                tasks: ['sass']
+            },
+            cssmin: {
+                files: ['_site/css/*.css'],
+                tasks: ['cssmin']
             }
         },
 
