@@ -23,17 +23,33 @@ module.exports = function (grunt) {
         // watch for files to change and run tasks when they do
         watch: {
             options: {
-                livereload: true
+                    livereload: true
             },
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
                 tasks: ['sass']
             },
-            cssmin: {
-                files: ['_site/css/*.css'],
-                tasks: ['cssmin']
+            imagemin: {
+                files: ['_assets/images/**/*.{png,jpg,gif}'],
+                tasks: ['newer:imagemin']
             }
         },
+
+        // Setup Imagemin
+        imagemin: {
+            options: {
+                optimizationLevel: 5,
+            },
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: '_assets/images/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '_site/assets'
+                }]
+            }
+        },
+
 
         // sass (libsass) config
         sass: {
@@ -69,8 +85,6 @@ module.exports = function (grunt) {
         // run tasks in parallel
         concurrent: {
             serve: [
-                'sass',
-                'cssmin',
                 'watch',
                 'shell:jekyllServe'
             ],
@@ -89,7 +103,9 @@ module.exports = function (grunt) {
     // Register the grunt build task
     grunt.registerTask('build', [
         'shell:jekyllBuild',
-        'sass'
+        'sass',
+        'cssmin',
+        'imagemin'
     ]);
 
     // Register build as teh default task fallback

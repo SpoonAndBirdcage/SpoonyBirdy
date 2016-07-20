@@ -21,8 +21,8 @@ github_username:  SpoonAndBirdcage
 markdown: kramdown
 
 # Excluded/Keep Files
-exclude: ['node_modules', 'css', '_scss']
-keep_files: ['_site/css']
+exclude: ['node_modules', 'css', '_scss', 'package.json', 'Gruntfile.js']
+keep_files: ['_site/css', '_site/assets']
 
 # Permalinks
 permalink: :categories/:title
