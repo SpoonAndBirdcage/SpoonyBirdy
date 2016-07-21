@@ -32,6 +32,10 @@ module.exports = function (grunt) {
             imagemin: {
                 files: ['_assets/images/**/*.{png,jpg,gif}'],
                 tasks: ['newer:imagemin']
+            },
+            html: {
+                files: ['_includes/**/*.html', '_layouts/**/*.html', '_posts/**/*.{md,markdown}', '*.yml'],
+                tasks: ['newer:shell:jekyllBuild']
             }
         },
 
