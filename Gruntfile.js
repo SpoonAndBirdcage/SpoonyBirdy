@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
+                tasks: ['sass', 'autoprefixer', 'cssmin']
             },
             imagemin: {
                 files: ['_assets/images/**/*.{png,jpg,gif}'],
@@ -50,7 +50,6 @@ module.exports = function (grunt) {
             }
         },
 
-
         // sass (libsass) config
         sass: {
             options: {
@@ -58,27 +57,42 @@ module.exports = function (grunt) {
                 relativeAssets: false,
                 outputStyle: 'expanded',
                 sassDir: '_sass',
-                cssDir: '_site/css'
+                cssDir: 'dist/'
             },
             build: {
                 files: [{
                     expand: true,
                     cwd: '_sass/',
                     src: ['**/*.{scss,sass}'],
-                    dest: '_site/css',
+                    dest: 'dist/',
                     ext: '.css'
                 }]
             }
         },
         cssmin: {
+            options: {
+                keepSpecialComment: 0,
+                advanced: true
+            },
             target: {
                 files: [{
                     expand: true,
-                    cwd:'_site/css',
-                    src: ['*.css', '!*.min.css'],
-                    dest: '_site/css',
+                    cwd:'dist/',
+                    src: ['**/*.css'],
+                    dest: '_site/css/',
                     ext: '.min.css'
                 }]
+            }
+        },
+        autoprefixer: {
+            options: {
+                browsers: ['last 8 versions', 'ie 8', 'ie 9', '> 1%']
+            },
+            main: {
+                expand: true,
+                flatten: true,
+                src: 'dist/*.css',
+                dest: ''
             }
         },
 
@@ -104,8 +118,9 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'shell:jekyllBuild',
         'sass',
+        'autoprefixer',
         'cssmin',
-        'imagemin'
+        'newer:imagemin'
     ]);
 
     // Register build as teh default task fallback

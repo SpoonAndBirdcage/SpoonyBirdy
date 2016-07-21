@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+// Normalize Scss
+@import "vendor/normalize";
+
 // Modules and Variables
 @import "partials/base";
 
@@ -14,4 +17,4 @@
 @import "partials/posts";
 
 // Import 3rd Party CSS
-@import "vendor/syntax-highlighting"
+@import "vendor/syntax-highlighting";
