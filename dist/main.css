@@ -1767,6 +1767,15 @@ article.type-system-serif h4 {
   margin-bottom: 4em;
 }
 
+article.type-system-serif h6 {
+  color: #879096;
+  letter-spacing: 0.1em;
+}
+
+article.type-system-serif h6 a {
+  color: #1ec0a7;
+}
+
 article.type-system-serif .portfolio-details {
   display: block;
   display: block;

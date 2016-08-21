@@ -6,7 +6,7 @@ cats: Product Design, Print Media, Student Work, Awesomeness
 categories: portfolio
 thumb-image: /assets/jpg/misc-portfolio-thumb.jpg
 outline: "<p>What we have here is a random assortment of side projects, school assignments and all around awesomeness that didn't really fit anywhere else. I guess I could have left them out but where is the fun in that!</p>"
-musings: "<p>I found that sweet baby blue suitcase in a back alley behind a bar at like 4am. Why was I in a back alley at 4am you ask? Well your guess is a good as mine. The stencil work was all me! The garbage can was also done with stencils. Looking back I could have probably painted it by hand in half the time. Live and learn I guess.</p>"
+musings: "<p>I found that sweet baby blue suitcase in a back alley behind a bar at like 4am. Why was I in a back alley at 4am you ask? Well your guess is a good as mine. The stencil work was all me though! The garbage can was also done with stencils. Looking back I could have probably painted it by hand in half the time. Live and learn I guess.</p>"
 images:
     -   image_path: "../assets/jpg/posts/misc/PopTrash-Front.jpg"
         alt: "Pop Trash"

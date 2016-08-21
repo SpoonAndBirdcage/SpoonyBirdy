@@ -20,6 +20,14 @@ article.type-system-serif {
     margin-bottom: 4em;
   }
 
+  h6 {
+    color: $base-font-color;
+    letter-spacing: 0.1em;
+      a {
+        color: $greenish;
+      }
+  }
+
   .portfolio-details {
     @include row;
     display: block;

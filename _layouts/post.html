@@ -10,20 +10,23 @@ layout: default
             <div class="portfolio-half">
                 <h5>Project Overview</h5>
                 {{ page.outline }}
+                {% if page.port-link %}
+                    <h6>To see more check out: <a href="{{ page.port-link }}" target="_blank">{{ page.port-link-title }}</a></h6>
+                {% endif %}
             </div>
             <div class="portfolio-half">
                 <h5>Musings</h5>
                 {{ page.musings }}
             </div>
         </div>
-            {% for image in page.images %}
+        {% for image in page.images %}
             <div class="img-box">
                 <div class="img-border-box">
                     <img src="{{ image.image_path }}" alt="{{ image.alt }}">
                 </div>
                 <p class="img-caption">{{ image.caption }}</p>
             </div>
-            {% endfor %}
+        {% endfor %}
         <p>{{ content }}</p>
     </article>
 </section>
