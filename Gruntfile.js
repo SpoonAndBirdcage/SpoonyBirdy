@@ -104,6 +104,18 @@ module.exports = function (grunt) {
                 dest: 'dist/pre'
             }
         },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '_site',
+                        src: '**',
+                        dest: '../../Sites/spoonandbirdcage.com',
+                    }
+                ],
+            },
+        },
 
         // run tasks in parallel
         concurrent: {
@@ -130,6 +142,16 @@ module.exports = function (grunt) {
         'autoprefixer',
         'cssmin',
         'newer:imagemin'
+    ]);
+
+    // Register the Live Page Build/Copy task
+    grunt.registerTask('copy', [
+        'shell:jekyllBuild',
+        'sass',
+        'autoprefixer',
+        'cssmin',
+        'newer:imagemin',
+        'copy'
     ]);
 
     // Register build as teh default task fallback
