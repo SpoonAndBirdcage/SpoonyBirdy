@@ -22,7 +22,7 @@ markdown: kramdown
 
 # Excluded/Keep Files
 exclude: ['node_modules', 'css', '_scss', 'package.json', 'Gruntfile.js', 'dist']
-keep_files: ['_site/css', '_site/assets']
+keep_files: ['_site/css', '_site/assets', '_site/js']
 
 # Permalinks
 permalink: :categories/:title

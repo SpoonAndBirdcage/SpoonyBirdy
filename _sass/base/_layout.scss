@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  background-color: $base-background-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.row-wrapper {
+    @include row();
+}
+
+.outer-container {
+    @include outer-container;
+}
+
+.work-container {
+    @include outer-container;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    @include media($large-screen) {
+        max-width: 800px;
+    }
+    @include media($medium-screen) {
+        max-width: 634px;
+    }
+    @include media($small-screen) {
+        max-width: 500px;
+    }
+    @include media($mobile) {
+        max-width: 305px;
+    }
+}
+
+.article-container {
+    @include outer-container;
+    padding-top: 170px;
+    padding-bottom: 80px;
+
+    @include media($large-screen) {
+        max-width: 800px;
+    }
+    @include media($medium-screen) {
+        max-width: 634px;
+    }
+    @include media($small-screen) {
+        max-width: 500px;
+    }
+    @include media($mobile) {
+        max-width: 305px;
+    }
+}

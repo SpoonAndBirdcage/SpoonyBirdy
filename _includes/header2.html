@@ -1,0 +1,28 @@
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper outer-container">
+    <a href="{{ site.baseurl }}/" class="mobile-logo">
+      <img src="{{ site.baseurl }}/assets/svg/smallLogo.svg" alt="Logo image">
+    </a>
+    <a href="" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      {% assign pages = site.pages | sort:"weight"  %}
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        {% for p in pages %}
+          {% if p.weight < 2 %}
+            <li class="nav-link">
+              <a {% if p.url == page.url %} class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <li class="nav-link logo">
+          <a href="{{ site.baseurl }}/" class="logo">
+            <img src="{{ site.baseurl }}/assets/svg/smallLogo.svg" alt="Logo image">
+          </a>
+        </li>
+        <li class="nav-link">
+          <a {% if p.url == page.url %} class="active"{% endif %} href="/#portfolio">Work</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

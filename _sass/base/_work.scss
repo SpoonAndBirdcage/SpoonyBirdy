@@ -1,0 +1,192 @@
+.introduction {
+    @include media($mobile) {
+        @include span-columns(2);
+        height: 305px;
+    }
+
+    @include media($small-screen) {
+        @include span-columns(8);
+        height: 255px;
+    }
+
+    @include media($medium-screen) {
+        @include span-columns(8);
+    }
+
+    @include media($large-screen) {
+        @include span-columns(8);
+        height: 255px;
+    }
+
+
+   @include span-columns(8);
+        height: 305px;
+        margin-bottom: 2em;
+        padding-right: 2em;
+
+        .introduction-info {
+            span {
+                color: $dark-gray;
+                font-family: $sans-serif;
+                font-weight: 300;
+                font-size: 1.1em;
+                font-style: italic;
+                letter-spacing: .05em;
+                display: block;
+                margin-bottom: .5em;
+            }
+
+            h1 {
+                color: $reddish;
+                font-size: 3em;
+                margin-bottom: 1em;
+
+                   @include media($small) {
+                    font-size: 4em;
+                    }
+            }
+
+            hr {
+                width: 6em;
+                border-bottom: 3px solid $bluish;
+                margin-bottom: 3em;
+            }
+
+            p {
+                letter-spacing: 0.02em;
+                font-size: 1.3em;
+            }
+
+        }
+     }
+
+
+
+.work-item {
+    @include media($mobile) {
+        @include span-columns(2);
+    }
+
+    @include media($small-screen) {
+        @include span-columns(4);
+        &:nth-of-type(2n + 1) {
+            @include omega;
+        }
+    }
+
+    @include media($medium-screen) {
+        @include span-columns(4);
+        &:nth-of-type(2n + 1) {
+            @include omega;
+        }
+    }
+
+    @include media($large-screen) {
+        @include span-columns(4);
+        &:nth-of-type(3n + 2) {
+            @include omega;
+
+        }
+    }
+
+    @include media($desktop) {
+        @include span-columns(4);
+        &:nth-of-type(3n + 2) {
+            @include omega;
+        }
+    }
+
+    width: 305px;
+}
+
+.work {
+    @include media($small-screen) {
+        height: 255px;
+    }
+
+    @include media($large-screen) {
+        height: 255px;
+    }
+
+    &:hover {
+        overflow: hidden;
+
+            .homepage-work {
+                opacity: .125;
+                transform: scale(1.03);
+                transition: transform 0.4s;
+            }
+
+            .portfolio-info {
+                opacity: 1;
+            }
+
+    }
+
+    .portfolio-info {
+        @include media($small-screen) {
+            padding: 5em 2em;
+        }
+
+        @include media($large-screen) {
+            padding: 5em 2em;
+        }
+
+
+        padding: 6.5em 2em;
+        text-align: center;
+
+            h2, h4 {
+                color: $base-background-color;
+            }
+
+            h2 {
+                line-height: 1.2;
+                letter-spacing: .05em;
+
+                @include media($medium) {
+                    font-size: 2em;
+                    }
+            }
+
+            h4 {
+                letter-spacing: .1em;
+                @include media($medium) {
+                    font-size: 1em;
+                    }
+            }
+
+            hr {
+                width: 6em;
+                margin: $base-spacing auto;
+                border-bottom: 3px solid $base-background-color;
+            }
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    height: 305px;
+    max-width: 305px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    position: relative;
+    background-color: $greenish;
+    z-index: 2;
+
+    .homepage-work {
+        @include media($small-screen) {
+        height: 255px;
+    }
+
+    @include media($large-screen) {
+        height: 255px;
+    }
+
+        height: 308px;
+        opacity: 1;
+        position: absolute;
+        z-index: -1;
+        transition: opacity 0.3s, transform 0.3s ease-in-out;
+    }
+}
+

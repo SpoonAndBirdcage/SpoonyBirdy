@@ -30,7 +30,7 @@ module.exports = function (grunt) {
                 tasks: ['sass', 'autoprefixer', 'cssmin']
             },
             imagemin: {
-                files: ['_assets/images/**/*.{png,jpg,gif}'],
+                files: ['_assets/**/*.{png,jpg,gif,svg}'],
                 tasks: ['newer:imagemin']
             },
             html: {
@@ -43,12 +43,17 @@ module.exports = function (grunt) {
         imagemin: {
             options: {
                 optimizationLevel: 5,
+                svgoPlugins: [{
+                    removeViewBox: false,
+                    removeUselessStrokeAndFill: false,
+                    removeEmptyAttrs: false
+                }]
             },
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: '_assets/images/',
-                    src: ['**/*.{png,jpg,gif}'],
+                    cwd: '_assets/',
+                    src: ['**/*.{png,jpg,gif,svg}'],
                     dest: '_site/assets'
                 }]
             }
@@ -67,7 +72,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '_sass/',
-                    src: ['**/*.{scss,sass}'],
+                    src: ['modules/**/*{scss,sass}', 'main.scss'],
                     dest: 'dist/',
                     ext: '.css'
                 }]
@@ -81,7 +86,7 @@ module.exports = function (grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd:'dist/',
+                    cwd:'dist/pre',
                     src: ['**/*.css'],
                     dest: '_site/css/',
                     ext: '.min.css'
@@ -96,7 +101,7 @@ module.exports = function (grunt) {
                 expand: true,
                 flatten: true,
                 src: 'dist/*.css',
-                dest: ''
+                dest: 'dist/pre'
             }
         },
 

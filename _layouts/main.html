@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="main-body">
+    <div class="hero">
+      <div class="hero-content">
+        <img src="assets/svg/heroLogo4.svg" class="hero-logo">
+      </div>
+    </div>
+    {% include header.html %}
+    <div class="row-wrapper">
+      <div class="work-container" id="portfolio">
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

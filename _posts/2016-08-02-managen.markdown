@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Managen"
+date:   2016-08-02 10:14:05 -0600
+cats: Web Design, Web Development
+categories: portfolio
+thumb-image: /assets/jpg/managen-portfolio-thumb.jpg
+outline: "<p>For the Homes By Managen project I was hired as a freelance Web Designer/Developer to create a new website for the company. The site they were using was functional but it was not mobile friendly nor did it emphasize the amazing homes that the company builds around Edmonton. Since they were already familiar with Wordpress (as that is what there old site was running on) it was a no brainier to use it as a CMS. They had also recently had a design firm re-brand their company with a new logo and colors so all in all it was a pretty easy build.</p>
+<p>The site has some pretty basic functionality. A main slider and a custom post type for adding new show homes and available homes where the heaviest lifts for the development. As for the design, The idea was to keep the site clean and bright and allow the images to be the focus. You can check out the live site to see more at managen.com</p>"
+musings: "<p>Working with Managen on this redesign was awesome. Not only did i get to work with one of Edmonton's premiere house builders, but I also got to work with one of my best and oldest friends. Josh Kehler is an amazingly talented photographer and he does all of the photography for Managen. Working with him to get all the amazing hero images, detail images and gallery shots was awesome.</p>"
+images:
+    -   image_path: "../assets/jpg/posts/managen/Managen-Home-Full.jpg"
+        alt: "Homes By Managen: Full Width Home Page"
+        caption: "Managen Homepage Complete with fancy image slider and static contact info header"
+    -   image_path: "../assets/jpg/posts/managen/Managen-Gallery-Full.jpg"
+        alt: "Homes By Managen: Full Width Kitchen Gallery"
+        caption: "Each gallery has thumbnail images separated into rows of 4. When an image is clicked a full page gallery with navigation arrows and a dark semi transparent background opens."
+    -   image_path: "../assets/jpg/posts/managen/Managen-Homes-Mobile.jpg"
+        alt: "Homes By Managen: Mobile Showhome and Available Homes"
+        caption: "Managen where very excited to have their new website be designed in a mobile first method. The menu changes to a drop-down and the columns all collapse making that site perfectly suited for mobile screens."
+---

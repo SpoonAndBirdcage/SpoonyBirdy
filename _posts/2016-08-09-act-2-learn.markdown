@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Act2Learn"
+date:   2016-08-09 10:14:05 -0600
+cats: Web Design, Web Development, Content Creation, Rebranding, Copywriting
+categories: portfolio
+thumb-image: /assets/jpg/act2learn-portfolio-thumb.jpg
+outline: "<p>While working at Trickster Theatre I was given the job of developing and designing the new Act2Learn.ca (previously the action learning institute). As the only person on the project I was tasked with creating a style guide for the brand (including new logo), transitioning all lesson plans from the old site, building in functionality that would allow users to create new accounts with the goal to eventually charge for the service and designing the new site.</p>
+<p>I picked Wordpress for the CMS because I was the most familiar with it at the time and figured I would be able to leverage a lot of its feature on this project. Also it's dashboard is pretty user friendly, which was key for being able to have other add content to the site over time. I also decided to use BootStrap as a framework so I would have a good foundation to design upon and not have to worry about building a custom grid system or anything like that. You can check out the live site to see more at Act2Learn.ca</p>"
+musings: "<p>I really got to flex both my design and my development muscles on this project. Me and the wordpress API became good friends by the time Act2Learn launched in 2015. This was also the project that lost my Git and GitHub virginity on. Even though I was the sole person on the project, It was nice to have an on-line repo keeping track of my commits. Being able to create a branch to work on specific functionality and then merge them back to a master was an awesome feature to have as well.</p>
+<p>Transitioning content from a website that was built in 2001 also posed an interesting learning experience. I originally was going to try and export some of the lesson plan data from the sites database but it turned out that the old site at one point had a forum built into it. Who ever built the site didn't put any kind of spam protection on it though so the database turned out to be a massive collection of porn ads and all sorts of nonsense. In the end it was faster to build a custom post type for the lesson plans and rebuild them all. </p>"
+images:
+    -   image_path: "../assets/jpg/posts/act2learn/A2L-HomeLogin-Full.jpg"
+        alt: "Act 2 Learn: Full Width Home Page"
+        caption: "Act2Learn's homepage was designed to be fun and colorful as well as give a quick overview of the product so that teachers or schools would sing-up to used the site."
+    -   image_path: "../assets/jpg/posts/act2learn/A2L-HomeLogout-Crop.jpg"
+        alt: "Act 2 Learn: Custom Login Page"
+        caption: "Because the site required a membership I had to write some PHP to dynamically change the navigation and homepage links to make it easier to access member content."
+    -   image_path: "../assets/jpg/posts/act2learn/A2L-Join-Full.jpg"
+        alt: "Act 2 Learn: Full Width Register Page"
+        caption: "I overrode the standard wordpress login/registration page with custom registration and login pages. I built a custom plug-in to achieve the requested functionality. The client wanted more information from the user when they signed up for a new account and I wanted more control over the design."
+    -   image_path: "../assets/jpg/posts/act2learn/A2L-LessonPlan-Full.jpg"
+        alt: "Act 2 Learn: Full Width Lesson Plan Index"
+        caption: "Lesson Plans were separated into a hierarchy of categories making it easy for teachers to drill down into the content and find what is available to them."
+    -   image_path: "../assets/jpg/posts/act2learn/A2L-ExampleLesson-Full.jpg"
+        alt: "Act 2 Learn: Full Width Example Lesson Plan"
+        caption: "In the wordpress back-end I created a custom post type for lesson plans making it much easier for the client to add new content in the future without having to fiddle with any code. It also made inputing the 90 plus lesson plans much easier on me."
+---

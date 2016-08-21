@@ -1,0 +1,32 @@
+.hero {
+  $large-screen: 50em !default;
+  align-items: center;
+  background: url("../assets/jpg/mainHero2.jpg") no-repeat bottom center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100%;
+  z-index: 1;
+  padding: 2em;
+
+  @include media($large-screen) {
+    background-position: bottom center;
+    background-size: cover;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 40em;
+    text-align: center;
+
+    @include media($large-screen) {
+      text-align: left;
+    }
+  }
+
+  .hero-logo {
+    margin: auto;
+    display: block;
+  }
+}

@@ -1,0 +1,139 @@
+.footer-main {
+  $base-spacing: 5em;
+  $footer-background: $light-gray;
+  $footer-color: $mid-gray;
+  $footer-link-color: $mid-gray;
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: tint($footer-background, 10%);
+  border-top: 1px solid darken($footer-background, 2%);
+  display: block;
+  position: relative;
+  bottom: 0;
+  padding: $base-spacing 0 4em 0;
+  font-family: $sans-serif-2;
+  width: 100%;
+
+    .full-footer {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+
+  .footer-logo {
+    margin-bottom: 1em;
+    text-align: center;
+
+    @include media($large-screen) {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 6em;
+    opacity: 0.7;
+    transition: opacity 0.5s ease 0s;
+
+    &:focus,
+    &:hover {
+          opacity: 1;
+    }
+  }
+
+    .footer-third {
+        @include span-columns(3.33 of 10);
+
+        &:nth-child(odd) {
+          padding: 1.5em 0;
+        }
+
+        &:nth-child(even) {
+          padding: 0.8em 0;
+        }
+    }
+
+  ul {
+    line-height: 1.5em;
+    padding: 0;
+
+    @include media($medium-screen) {
+      line-height: 1.5em;
+    }
+  }
+
+  .foot-left {
+    float: left;
+    text-align: left;
+
+    hr {
+      width: 3.5em;
+      border: 1px solid $dark-gray;
+      margin: 1em 0 1em 0;
+    }
+  }
+
+  .foot-right {
+    float: right;
+    text-align: right;
+
+     hr {
+      width: 3.5em;
+      border: 1px solid $dark-gray;
+      margin: 1em 0 1em auto;
+    }
+
+    span {
+      color: $dark-gray;
+      font-family: $serif-2;
+      font-size: 1em;
+
+      @include media($medium-screen) {
+      line-height: 1.2em;
+    }
+    }
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ul li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+    li {
+      font-size: 0.8em;
+    }
+
+    ul.footer-social {
+
+      li {
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        display: inline;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.1em;
+        opacity: 0.7;
+        padding: 0 0.6em 0 0 ;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+}

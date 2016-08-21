@@ -1,38 +1,40 @@
-<footer class="site-footer">
+<footer class="footer-main row-wrapper" role="contentinfo">
+    <section class="outer-container">
+      <div class="full-footer">
+        <div class="footer-third foot-left">
+            <h6>Interweb Things</h6>
+            <hr>
+              <ul class="footer-social">
+                <li><a href="https://twitter.com/SpoonBirdcage" target="_blank">
+                  <img src="{{ site.baseurl }}/assets/svg/twitter.svg" alt="Twitter">
+                  </a></li>
+                <li><a href="https://github.com/SpoonAndBirdcage" target="_blank">
+                  <img src="{{ site.baseurl }}/assets/svg/github.svg" alt="Git Hub">
+                </a></li>
+                <li><a href="https://www.instagram.com/spoonandbirdcage/" target="_blank">
+                  <img src="{{ site.baseurl }}/assets/svg/instagram.svg" alt="Instagram">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/barrett-long-315982119" target="_blank">
+                  <img src="{{ site.baseurl }}/assets/svg/linkedin2.svg" alt="LinkedIn">
+                </a></li>
+              </ul>
+        </div>
+        <div class="footer-third">
+            <div class="footer-logo">
+              <a href="{{ site.baseurl }}/">
+                <img src="{{ site.baseurl }}/assets/svg/footLogo2.svg" alt="Logo image">
+              </a>
+            </div>
+        </div>
+        <div class="footer-third foot-right">
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+            <h6>Awesome Designs</h6>
+            <hr>
+            <span>Since. 2010</span>
+        </div>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
-
+    </section>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>

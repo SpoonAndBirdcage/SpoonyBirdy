@@ -1,20 +1,25 @@
 @charset "utf-8";
 
-// Normalize Scss
+/**
+ *      Normalize All Scss
+ */
 @import "vendor/normalize";
 
-// Modules and Variables
-@import "partials/base";
+/**
+ *      Import Bourbon, Neat and Bitters
+ */
+@import "vendor/bourbon/bourbon";
+@import "grid-settings";
+@import "vendor/neat/neat";
+@import "base/base";
 
-// Import Partials
-@import "partials/reset";
-@import "partials/figures";
-@import "partials/typography";
-@import "partials/wrappers";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/content";
-@import "partials/posts";
-
-// Import 3rd Party CSS
+/**
+ *      Import Syntax Highlighting
+ */
 @import "vendor/syntax-highlighting";
+
+/**
+ *      Import Custom Modules Styles
+ */
+@import "modules/modules";
+

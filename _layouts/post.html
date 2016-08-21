@@ -1,15 +1,29 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-</article>
+<section>
+    <article class="type-system-serif">
+        <h1>{{ page.title }}</h1>
+        <h4>{{ page.cats }}</h4>
+        <hr>
+        <div class="portfolio-details">
+            <div class="portfolio-half">
+                <h5>Project Overview</h5>
+                {{ page.outline }}
+            </div>
+            <div class="portfolio-half">
+                <h5>Musings</h5>
+                {{ page.musings }}
+            </div>
+        </div>
+            {% for image in page.images %}
+            <div class="img-box">
+                <div class="img-border-box">
+                    <img src="{{ image.image_path }}" alt="{{ image.alt }}">
+                </div>
+                <p class="img-caption">{{ image.caption }}</p>
+            </div>
+            {% endfor %}
+        <p>{{ content }}</p>
+    </article>
+</section>
