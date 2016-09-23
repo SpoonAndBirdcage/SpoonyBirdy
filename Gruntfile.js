@@ -145,7 +145,7 @@ module.exports = function (grunt) {
     ]);
 
     // Register the Live Page Build/Copy task
-    grunt.registerTask('copy', [
+    grunt.registerTask('production', [
         'shell:jekyllBuild',
         'sass',
         'autoprefixer',

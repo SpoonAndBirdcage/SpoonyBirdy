@@ -19,5 +19,5 @@ images:
         caption: "Each gallery has thumbnail images separated into rows of 4. When an image is clicked a full page gallery with navigation arrows and a dark semi transparent background opens."
     -   image_path: "../assets/jpg/posts/managen/Managen-Homes-Mobile.jpg"
         alt: "Homes By Managen: Mobile Showhome and Available Homes"
-        caption: "Managen where very excited to have their new website be designed in a mobile first method. The menu changes to a drop-down and the columns all collapse making that site perfectly suited for mobile screens."
+        caption: "Managen where very excited to have their new website be designed in a mobile first method. The menu changes to a drop-down and the columns all collapse making the site perfectly suited for mobile screens."
 ---

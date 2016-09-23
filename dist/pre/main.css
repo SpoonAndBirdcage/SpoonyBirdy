@@ -1158,6 +1158,115 @@ hr {
   }
 }
 
+.about-info {
+  font-family: "Trirong", serif;
+  font-size: 1.275em;
+  color: #1ec0a7;
+  weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1000px) {
+  .about-info {
+    font-size: 1.87em;
+  }
+}
+
+.about-item {
+  float: left;
+  display: block;
+  margin-right: 2.1276595745%;
+  width: 31.914893617%;
+  padding: 1em;
+  margin-bottom: 50px;
+}
+
+.about-item:last-child {
+  margin-right: 0;
+}
+
+.about-item:first-of-type {
+  padding-left: 0;
+}
+
+.about-item:last-of-type {
+  padding-right: 0;
+}
+
+@media screen and (max-width: 589px) {
+  .about-item {
+    float: left;
+    display: block;
+    margin-right: 14.2857142857%;
+    width: 100%;
+  }
+  .about-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 590px) and (max-width: 710px) {
+  .about-item {
+    float: left;
+    display: block;
+    margin-right: 3.2258064516%;
+    width: 29.0322580645%;
+  }
+  .about-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 711px) and (max-width: 1000px) {
+  .about-item {
+    float: left;
+    display: block;
+    margin-right: 3.2258064516%;
+    width: 29.0322580645%;
+  }
+  .about-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1180px) {
+  .about-item {
+    float: left;
+    display: block;
+    margin-right: 2.1276595745%;
+    width: 31.914893617%;
+  }
+  .about-item:last-child {
+    margin-right: 0;
+  }
+}
+
+.about-item h4 {
+  margin-bottom: 0.5em;
+  font-family: "Raleway", sans-serif;
+  color: #103742;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.about-item p {
+  letter-spacing: 0.02em;
+}
+
+.about-item a {
+  color: #1ec0a7;
+}
+
+.about-item hr {
+  width: 3em;
+  border-bottom: 4px solid #f5a503;
+  margin-bottom: 1.2em;
+  margin-top: 0;
+}
+
 /**
  *      Import Syntax Highlighting
  */
